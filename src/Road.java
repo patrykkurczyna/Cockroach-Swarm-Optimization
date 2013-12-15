@@ -14,8 +14,7 @@ public class Road {
 	public Graph getWeightsFromFile(String fileName) {
 		List<Record> pointList = new ArrayList<Record>();
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(new File(
-					fileName)));
+			BufferedReader br = new BufferedReader(new FileReader(new File(fileName)));
 			String line = "";
 			while ((line = br.readLine()) != null && line.length() > 0) {
 				String[] splittedLine = line.split(" ");

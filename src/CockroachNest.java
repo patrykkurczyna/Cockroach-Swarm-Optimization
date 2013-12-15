@@ -193,9 +193,19 @@ public class CockroachNest {
 			}
 
 		}
+		int minimal = 0;
 		for (this.currentIteration = 0; this.currentIteration < this.numOfIterations; this.currentIteration += 1) {
 			doIteration();
-			System.out.println(this.currentIteration + " Minimalna: "+ this.minIteration + " Rozwi¹zanie: "+ this.graph.getSolution(this.globalMinimum));
+			if (this.minIteration != minimal){
+				System.out.print(this.currentIteration + " Minimalna: "+ this.minIteration + " Rozwi¹zanie: "+ this.graph.getSolution(this.globalMinimum));
+				System.out.print(" -> ");
+				for (int i = 0; i < this.globalMinimum.length; i++){
+					System.out.print(this.globalMinimum[i]+ " ");
+				}
+				System.out.println();
+				minimal = this.minIteration;
+				
+			}
 		}
 		
 		

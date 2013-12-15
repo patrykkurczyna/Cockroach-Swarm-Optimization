@@ -12,7 +12,7 @@ public class Demo {
 			CockroachNest problem2 = new CockroachNest(graph);
 			long start = System.currentTimeMillis();
 			problem.solve();
-			problem2.solve();
+			//problem2.solve();
 			System.out.println("Time spent: " + (System.currentTimeMillis() - start) + " ms.");
 		} catch (IOException e) {
 			e.printStackTrace();
